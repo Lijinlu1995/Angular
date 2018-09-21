@@ -4,7 +4,19 @@
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
-<body>
-
+<!--需要ng管理的代码必须包在ng-app中-->
+<body ng-app>
+<div><h1>使用NG实现双边数据绑定</h1>
+    <!--ng-model是双向数据绑定的指令 效果就是将当前元素的value绑定到username-->
+    <p><input type="text" placeholder="please input username" ng-model="user.name">
+    </p>
+    <!--{{表达式}}也是建立了一个双向绑定-->
+    <p>hello <strong>{{user.name}}</strong></p>
+</div>
+<script src="bower_components/angular/angular.js"></script>
+<svript>
+    <!--创建一个模块， 2个参数是创建，1个参数是获取-->
+    angular.module('myApp',[]);
+</svript>
 </body>
 </html>
