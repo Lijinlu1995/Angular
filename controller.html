@@ -10,9 +10,20 @@
     //由于控制器是必须出现在某个模块下，创建一个controller必须先创建模块
     var module = angular.module('myModile',[]);//返回的是模块对象
     //angular在执行控制器函数的时候，会根据参数的名字（$scope)气自动注入对象
-    module.controller('HelloContriller',function ($scope) {
+ /*   module.controller('HelloContriller',function ($scope) {
 
-    });
+    });*/
+    module.controller('HelloContriller',['$scope',function (a) {
+            console.log(a);
+            $scope.user = {
+                username: '',
+                password: ''
+            };
+
+            $scope.login =function() {
+
+            }
+    }]);
 </script>
 </body>
 </html>
