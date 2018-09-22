@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body ng-app ng-init="username = 'name'">
+<!--<strong>{{username}}</strong>-->
+<!--ng-bind 在绑定值包含html时会转义，为了安全-->
+<strong ng-bind="username"></strong>
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components"></script>
+<script>
+angular.module('myApp', [ngSanitize]);
+</script>
+</body>
+</html>
