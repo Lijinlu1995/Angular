@@ -13,7 +13,6 @@
         controller: 'MainController',
         templateUrl: 'main_tmpl'
       })
-
       .otherwise({ redirectTo: '/' });
   }]);
 
